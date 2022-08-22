@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>FF7</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Mukta', sans-serif;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('./images/bg-full.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      width: 35%;
+      height: 60%;
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('./images/main.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main img {
+      width: 25%;
+      object-fit: cover;
+    }
+
+    .main div {
+      width: 80%;
+      color: white;
+      text-align: center;
+    }
+
+    .character {
+      width: 35%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cloud {
+      width: 100%;
+      height: 50%;
+      background: rgb(183, 181, 181);
+      background-image: url('./images/cloud.png');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 40% 95%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .cloud div {
+      width: 60%;
+      padding: 5%;
+      color: black;
+      text-align: left;
+    }
+
+    .tifa {
+      width: 100%;
+      height: 50%;
+      background: black;
+      background-image: url('./images/tifa.png');
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 40% 95%;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+
+    .tifa div {
+      width: 60%;
+      padding: 5%;
+      color: white;
+      text-align: left;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <img src="./images/ps4-ff7.png">
+      <div>
+        <h1>AVAILABL NOW</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, porro doloribus! Quos recusandae quae praesentium suscipit eos facere vitae consectetur excepturi totam. Dolorem aperiam possimus velit sapiente veniam architecto amet?</p>
+      </div>
+    </div>
+    <div class="character">
+      <div class="cloud">
+        <div>
+          <h1>Cloud</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Quos recusandae quae praesentium suscipit eos facere vitae excepturi totam. Dolorem aperiam possimus velit sapiente veniam architecto amet?</p>
+        </div>
+      </div>
+      <div class="tifa">
+        <div>
+          <h1>Tifa</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Quos recusandae quae praesentium suscipit eos facere vitae excepturi totam. Dolorem aperiam possimus velit sapiente veniam architecto amet?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
