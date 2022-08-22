@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese Chess</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: '標楷體';
+    }
+
+    .container {
+      width: 1200px;
+      height: 1200px;
+      position: relative;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .box1 {
+      width: 100px;
+      height: 1200px;
+    }
+
+    .box1 p {
+      writing-mode: vertical-lr;
+    }
+
+    .box2 {
+      width: 1000px;
+      height: 1000px;
+      border: 1px solid #000;
+    }
+    
+    .plate {
+      width: 798.5px;
+      height: 900px;
+      border: 1px solid #000;
+    }
+    
+    .row {
+      width: 800px;
+      height: 100px;
+      /* border: 1px solid #000; */
+    }
+
+    .col {
+      width: 198px;
+      height: 98px;
+      border: 1px solid #000;
+    }
+
+    .line {
+      width: 1px;
+      height: 99px;
+      background: #ddd;
+      /* z-index: 2; */
+    }
+
+    .line2 {
+      width: 1px;
+      height: 140px;
+      background: #333;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chess {
+      width: 78px;
+      height: 78px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background: #fff;
+      position: relative;
+      z-index: 3;
+    }
+
+    p {
+      font-size: 3.5rem;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .d-flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+  </style>
+  <body>
+    <div class="container center">
+      <div class="box1 center"><p>棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</p></div>
+      <div class="box2 center">
+        <div class="plate">
+          <div class="row d-flex">
+            <div class="col center">
+              <div class="chess center" style="top: -50%; right: 9%; transform: translateX(-50%);"><p>車</p></div>
+              <div class="line"><div class="chess center" style="top: 0; right: 0; transform: translate(-50%, -50%);"><p>馬</p></div></div>
+              <div class="chess center" style="top: -50%; left: 50%; transform: translateX(-50%);"><p>象</p></div>
+            </div>
+            <div class="col center">
+              <div class="line"><div class="chess center" style="top: 0; right: 0; transform: translate(-50%, -50%);"><p>士</p></div></div>
+              <div class="line2" style="top: 0;left: calc(25% - 1px);transform: rotate(315deg);"></div>
+            </div>
+            <div class="col center">
+              <div class="line">
+                <div class="chess center" style="top: 0; right: 0; transform: translate(-50%, -50%);"><p>士</p></div>
+                <div class="chess center" style="top: -80%; right: 99px;transform: translate(-50%, -50%);"><p>將</p></div>
+              </div>
+              <div class="line2" style="top: 0;right: calc(25% + 1px);transform: rotate(45deg);"></div>
+            </div>
+            <div class="col center">
+              <div class="chess center" style="top: -50%; right: 9%; transform: translateX(-50%);"><p>象</p></div>
+              <div class="line"><div class="chess center" style="top: 0; right: 0; transform: translate(-50%, -50%);"><p>馬</p></div></div>
+              <div class="chess center" style="top: -50%; left: 50%; transform: translateX(-50%);"><p>車</p></div>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col center"><div class="line"></div></div>
+            <div class="col center">
+              <div class="line"></div>
+              <div class="line2" style="top: 0;left: calc(25% - 1px);transform: rotate(225deg);"></div>
+            </div>
+            <div class="col center">
+              <div class="line"></div>
+              <div class="line2" style="top: 0;right: calc(25% + 1px);transform: rotate(135deg);"></div>
+            </div>
+            <div class="col center"><div class="line"></div></div>
+          </div>
+          <div class="row d-flex">
+            <div class="col center">
+              <div class="line"><div class="chess center" style="top: 0; right: 0; transform: translate(-50%, -50%);"><p>包</p></div></div>
+            </div>
+            <div class="col center"><div class="line"></div></div>
+            <div class="col center"><div class="line"></div></div>
+            <div class="col center">
+              <div class="line"><div class="chess center" style="top: 0; right: 0; transform: translate(-50%, -50%);"><p>包</p></div></div>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col center">
+              <div class="chess center" style="top: -50%; right: 9%; transform: translateX(-50%);"><p>卒</p></div>
+              <div class="line"></div>
+              <div class="chess center" style="top: -50%; left: 50%; transform: translateX(-50%);"><p>卒</p></div>
+            </div>
+            <div class="col center">
+              <div class="line"></div>
+            </div>
+            <div class="col center">
+              <div class="line">
+                <div class="chess center" style="top: 0%; right: 99px;transform: translate(-50%, -50%);"><p>卒</p></div>
+              </div>
+            </div>
+            <div class="col center">
+              <div class="chess center" style="top: -50%; right: 9%; transform: translateX(-50%);"><p>卒</p></div>
+              <div class="line"></div>
+              <div class="chess center" style="top: -50%; left: 50%; transform: translateX(-50%);"><p>卒</p></div>
+            </div>
+          </div>
+          <div class="row center" style="justify-content: space-around;">
+            <p style="font-size: 4rem;">楚河</ㄣ>
+            <p style="font-size: 4rem;">漢界</ㄣ>
+          </div>
+          <div class="row d-flex">
+            <div class="col center">
+              <div class="chess center" style="bottom: -50%; right: 9%; transform: translateX(-50%);"><p class="red">兵</p></div>
+              <div class="line"></div>
+              <div class="chess center" style="bottom: -50%; left: 50%; transform: translateX(-50%);"><p class="red">兵</p></div>
+            </div>
+            <div class="col center">
+              <div class="line"></div>
+            </div>
+            <div class="col center">
+              <div class="line">
+                <div class="chess center" style="bottom: -99%; right: 99px;transform: translate(-50%, -50%);"><p class="red">兵</p></div>
+              </div>
+            </div>
+            <div class="col center">
+              <div class="chess center" style="bottom: -50%; right: 9%; transform: translateX(-50%);"><p class="red">兵</p></div>
+              <div class="line"></div>
+              <div class="chess center" style="bottom: -50%; left: 50%; transform: translateX(-50%);"><p class="red">兵</p></div>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col center">
+              <div class="line"><div class="chess center" style="bottom: -99%; right: 0; transform: translate(-50%, -50%);"><p class="red">炮</p></div></div>
+            </div>
+            <div class="col center"><div class="line"></div></div>
+            <div class="col center"><div class="line"></div></div>
+            <div class="col center">
+              <div class="line"><div class="chess center" style="bottom: -99%; right: 0; transform: translate(-50%, -50%);"><p class="red">炮</p></div></div>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col center"><div class="line"></div></div>
+            <div class="col center">
+              <div class="line"></div>
+              <div class="line2" style="top: 0;left: calc(25% - 1px);transform: rotate(315deg);"></div>
+            </div>
+            <div class="col center">
+              <div class="line"></div>
+              <div class="line2" style="top: 0;right: calc(25% + 1px);transform: rotate(45deg);"></div>
+            </div>
+            <div class="col center"><div class="line"></div></div>
+          </div>
+          <div class="row d-flex">
+            <div class="col center">
+              <div class="chess center" style="bottom: -50%; right: 9%; transform: translateX(-50%);"><p class="red">俥</p></div>
+              <div class="line"><div class="chess center" style="bottom: -99%; right: 0; transform: translate(-50%, -50%);"><p class="red">傌</p></div></div>
+              <div class="chess center" style="bottom: -50%; left: 50%; transform: translateX(-50%);"><p class="red">相</p></div>
+            </div>
+            <div class="col center">
+              <div class="line"><div class="chess center" style="bottom: -99%; right: 0; transform: translate(-50%, -50%);"><p class="red">仕</p></div></div>
+              <div class="line2" style="top: 0;left: calc(25% - 1px);transform: rotate(225deg);"></div>
+            </div>
+            <div class="col center">
+              <div class="line">
+                <div class="chess center" style="bottom: -99%; right: 0; transform: translate(-50%, -50%);"><p class="red">仕</p></div>
+                <div class="chess center" style="bottom: -19%; right: 99px;transform: translate(-50%, -50%);"><p class="red">帥</p></div>
+              </div>
+              <div class="line2" style="top: 0;right: calc(25% + 1px);transform: rotate(135deg);"></div>
+            </div>
+            <div class="col center">
+              <div class="chess center" style="bottom: -50%; right: 9%; transform: translateX(-50%);"><p class="red">相</p></div>
+              <div class="line"><div class="chess center" style="bottom: -99%; right: 0; transform: translate(-50%, -50%);"><p class="red">傌</p></div></div>
+              <div class="chess center" style="bottom: -50%; left: 50%; transform: translateX(-50%);"><p class="red">俥</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box1 center"><p>圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p></div>
+    </div>
+  </body>
